@@ -6,3 +6,10 @@ resources:
     uri: git@github.com:pavanginjupalli/demoapp.git
     branch: develop
     private_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC9+dUlNeuzZYfwb9/KYBd1Xl/SZbP4LKG1YxWNrP8UaLzsNXygNjzQ/lnb9c58FBN3HqLIvHh6sGU3sog7PYXCJRX3iSvadzZY1gRPYpodbCKkobt4htSk7/w78/Ir0qFD0MhaolYVITQW402ZWKkPnTH+ktLqoz3fApQ9ZUpej9+6r4rgjIfelRAkC7+jpr+IerGCcNktFKujj1zVHKYJS5DwDPYL60wHHJ5r2iBKzP2NSotWThKB6hjFSfJ+2F0FBRL/WIPmByXlZwIkZEezBYLGzxgKlKZbBKcye7jNNmT5L18vLXpXz46bEMc9M4IG/izHUsfXiVIJpb0PDaqm8VeS4pK6jY0CqywN3pcsTOPNgUJ5SHO+iwTMQisOli3pp8sUiBsJTCn7dYS5uqft5PZNIsfQfQiujyEZ4C0LXCgF3O1869pTTcVCe95fPbZUcvxvPQ6yZ7dVW/fCkQrdSnIBt6PNyWoGPKOxI11DiWXWKmZ8FajnmKSxvefPBTcnfNFqsAhFe0w3XeabkotFFbHYkN+h2TOaq4fFJGu3z7SfgwIjvbi3W8M3VvxhereMMO43XkDvulv/npp4I0xI6BpJ5a2PdsqqQIc4MMy7DW+Pg1xMbBR7IOvxMYVBg54cvr6huI1vb0P+/Yp3Zdr1EN0IuSvUETClkDRaGtP1Zw== git@github.com:pavanginjupalli/demoapp.git
+
+jobs:
+- name: getgit
+  max_in_flight: 1
+  plan:
+  - get: demoapp
+    trigger: true
