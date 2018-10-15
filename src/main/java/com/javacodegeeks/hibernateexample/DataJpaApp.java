@@ -43,6 +43,7 @@ public class DataJpaApp implements CommandLineRunner {
 		Person editedPerson = service.editPerson(person);
 		LOG.info("Person edited in DB  : {}", person);
 
+		//test4
 		//service.deletePerson(person);
 		//LOG.info("After deletion, count: {}", service.countPersons());
 	}
